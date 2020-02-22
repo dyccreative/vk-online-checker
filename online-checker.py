@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 import time
 import argparse
-import subprocess
+# import subprocess
 
 parser = argparse.ArgumentParser('python online-checker.py id123456789')
 parser.add_argument('id', help='Paste here the user ID. ID format: id123456789 or other. !!!DO NOT PASTE A LINK!!!')
@@ -18,7 +18,7 @@ while online is not 'Online':
     print(online[0].text)
 
     if online[0].text == 'Online':
-        subprocess.call("termux-notification -c 'The user is Online!' --sound")
+        # termux-notification -c 'The user is Online!' --sound
         break
     else:
         pass
