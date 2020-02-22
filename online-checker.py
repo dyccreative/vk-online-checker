@@ -17,7 +17,7 @@ while online is not 'Online':
     print(online[0].text)
 
     if online[0].text == 'Online':
-        termux-notification --button1 'The user is Online!' --sound
+        termux-notification -c 'The user is Online!' --sound
         break
     else:
         pass
