@@ -20,6 +20,9 @@ while online is not 'Online':
     if online[0].text == 'Online':
         # termux-notification -c 'The user is Online!' --sound
         break
+    elif online[0].text == '':
+        print("There is a problem during checking the online status. It is caused by empty information in the HTML block. It's probably because of the user's privacy settings.")
+        break
     else:
         pass
     
